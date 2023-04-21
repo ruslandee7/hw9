@@ -10,4 +10,4 @@
   synchronize:
     mode: pull
     src: /opt/boxfuse/target/*
-    dest: /tmp
+    dest: /tmp/
