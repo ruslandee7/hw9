@@ -1,2 +1,13 @@
 ---
 # handlers file for backend
+- name: clone repo
+  git: repo='https://github.com/boxfuse/boxfuse-sample-java-war-hello.git' dest=/opt/boxfuse/
+
+- name: maven package
+  command: mvn package -f /opt/boxfuse/pom.xml
+
+- name: copy warfile
+  synchronize:
+    mode: pull
+    src: /opt/boxfuse/target/*
+    dest: /tmp

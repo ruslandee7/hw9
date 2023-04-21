@@ -1,2 +1,7 @@
 ---
 # handlers file for web
+- name: copy warfile
+  synchronize:
+    mode: push
+    src: /tmp/hello-1.0.war
+    dest: /var/lib/tomcat9/webapps/

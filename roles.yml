@@ -1,0 +1,14 @@
+---
+- name: backend server configuration
+  hosts: backend
+  become: yes
+
+  roles:
+    - backend
+
+- name: web server cofiguration
+  hosts: backend
+  become: yes
+
+  roles:
+    - web

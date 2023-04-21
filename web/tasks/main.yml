@@ -1,2 +1,6 @@
 ---
 # tasks file for web
+- name: Provisioning tomcat9
+  apt:
+    name: tomcat9
+    state: present

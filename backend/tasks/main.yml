@@ -1,2 +1,11 @@
 ---
 # tasks file for backend
+- name: Provisioning packages
+  apt: name={{item}} state=present
+  with_items:
+    - maven
+    - git
+  notify:
+    - clone repo
+    - maven package
+    - copy warfile
