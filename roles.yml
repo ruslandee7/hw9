@@ -4,6 +4,7 @@
   become: yes
 
   roles:
+    - common
     - backend
 
 - name: web server cofiguration
@@ -11,4 +12,5 @@
   become: yes
 
   roles:
+    - common
     - web

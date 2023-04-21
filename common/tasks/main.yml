@@ -1,2 +1,6 @@
 ---
 # tasks file for common
+- name: Provisioning python
+  apt:
+    name: python3
+    state: present
